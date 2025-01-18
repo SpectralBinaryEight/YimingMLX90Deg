@@ -1,0 +1,5 @@
+screenshots_LLM_input/
+venv/
+sensitive_data.txt
+venv/
+another_sensitive_file.txt
