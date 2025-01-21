@@ -64,7 +64,7 @@ def perform_statistical_tests(data1, data2):
     tests = {
         't-test': ttest_ind,
         'Mann-Whitney U': mannwhitneyu,
-        'Wilcoxon': wilcoxon,
+        #'Wilcoxon': wilcoxon,
         'Kolmogorov-Smirnov': ks_2samp,
         'Anderson-Darling': anderson_ksamp,
     }
@@ -110,15 +110,3 @@ for test_name, result in results.items():
             print(f"The two datasets are significantly different according to the {test_name} test (p < 0.05).")
         else:
             print(f"The two datasets are not significantly different according to the {test_name} test (p >= 0.05).")
-# # Perform a statistical comparison
-# # Example: Independent t-test
-# stat, p_value = ttest_ind(mat_values, csv_values, equal_var=False)
-
-# print(f"T-test statistic: {stat}")
-# print(f"P-value: {p_value}")
-
-# # Interpretation
-# if p_value < 0.05:
-#     print("The two datasets are significantly different (p < 0.05).")
-# else:
-#     print("The two datasets are not significantly different (p >= 0.05).")
